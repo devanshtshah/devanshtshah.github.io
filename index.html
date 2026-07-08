@@ -92,6 +92,8 @@
     opacity: 0.35;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.05 0 0 0 0 0.04 0 0 0 0 0.02 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
+  ::selection { background: rgba(156, 124, 56, 0.22); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
   img { max-width: 100%; display: block; }
   a { color: inherit; text-decoration: none; }
 
@@ -134,7 +136,7 @@
     position: relative;
     z-index: 2;
   }
-  section { padding: var(--section-pad) 0; position: relative; }
+  section { padding: var(--section-pad) 0; position: relative; scroll-margin-top: 72px; }
   .section-head { margin-bottom: 56px; }
   .section-head h2 { margin-top: 14px; max-width: 720px; }
 
@@ -979,6 +981,27 @@
     .reveal { opacity: 1; transform: none; transition: none; }
     html { scroll-behavior: auto; }
   }
+     
+/* ============================================================
+     16. PRINT
+     ============================================================ */
+  @media print {
+    body { background: #fff; }
+    body::before, .nav, .hero-actions, footer { display: none; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    section { padding: 32px 0; scroll-margin-top: 0; }
+    .project, .tl-item, .edu-block, .cred-item { break-inside: avoid; }
+    .project { box-shadow: none !important; transform: none !important; }
+    .project.featured { background: #fff; color: var(--ink); border: 1px solid var(--hairline); }
+    .project.featured h3 { color: var(--ink); }
+    .project.featured p { color: var(--ink-soft); }
+    .project.featured .project-tag, .project.featured .project-tag span { color: var(--accent); }
+    .project.featured .project-metric { border-top-color: var(--hairline-soft); }
+    .project.featured .project-metric .k { color: var(--ink-muted); }
+    .project.featured .project-metric .v { color: var(--ink); }
+    .hero-photo { box-shadow: none; }
+    .extras { background: #fff; }
+  }
 </style>
 </head>
 <body>
@@ -1092,7 +1115,7 @@
           My path into finance has not been linear and I've come to think of that as the advantage. Four years at <strong>PricewaterhouseCoopers (PwC)</strong> in Mumbai, across Capital Markets and Accounting Advisory and audit, put me in the room for technical work most peers haven't seen: an IFRS to US GAAP conversion and SEC filing readiness for a $34B Irish-listed industrials group, an IFRS transition for a $2B Saudi conglomerate and an embedded role inside a $20B UK telecom group's month-end close. The work taught me how financial statements actually behave under pressure.
         </p>
         <p>
-          The <strong>MS Finance program at UIUC Gies</strong> sharpened that foundation against the deal side. I built DCFs and LBOs on real tickers, modeled synergies and defended price targets to professors who had seen every assumption before. That same instinct now runs through my work as a Finance Associate at <strong>Aorbis Inc.</strong>, where I lead monthly close, working capital diagnostics and the financial planning behind a new service launch. In parallel, I am working through the BIWS Advanced M&amp;A Modeling certificate, which has me building merger models on real public deals end to end. The accounting rigor and the investment lens both stay in play.
+          The <strong>MS Finance program at UIUC Gies</strong> sharpened that foundation against the deal side. I built DCFs and LBOs on real tickers, modeled synergies and defended price targets to professors who had seen every assumption before. That same instinct now runs through my work as a Finance Associate at <strong>Aorbis Inc.</strong>, where I lead monthly close and working capital diagnostics and support the financial planning behind a new service launch. In parallel, I am working through the BIWS Advanced M&amp;A Modeling certificate, which has me building merger models on real public deals end to end. The accounting rigor and the investment lens both stay in play.
         </p>
         <p>
           What I am building toward is a seat in <strong>investment banking, M&amp;A advisory, equity research or financial due diligence</strong>. The kind of work where the analysis has to defend itself, where a synergy figure or a price target has to hold up under questioning. The right answer is usually the one that survives the scrutiny.
@@ -1129,7 +1152,7 @@
           <li>Lead monthly close, journal entries, balance sheet reconciliations and US GAAP financial reporting on QuickBooks. Tighter controls and a more structured close process <strong>reduced recurring period-end adjustments by approximately 20%</strong>.</li>
           <li>Diagnosed the working capital cycle across receivables, payables and short-term debt. Recommended process changes <strong>shortened the cash conversion cycle by 5 days</strong> and freed up operating cash for reinvestment.</li>
           <li>Built rolling cash flow forecasts and revenue quality analysis to improve management visibility into liquidity, variance drivers and capital allocation.</li>
-          <li>Improving financial reporting quality, balance sheet visibility and audit-readiness to support the company's growth, scalability and financing readiness as it scales.</li>
+          <li>Strengthening financial reporting quality, balance sheet visibility and audit-readiness to support financing conversations as the company grows.</li>
           <li>Supporting the launch of a <strong>new service segment (OSTE)</strong>, coordinating with the marketing head on go-to-market strategy and aligning financial analysis with commercial decisions.</li>
         </ul>
       </div>
@@ -1266,7 +1289,10 @@
         <div class="project-tag">BIWS Advanced M&amp;A Modeling Certificate <span>·</span> In Progress</div>
         <h3>Builders FirstSource / BMC Stock Holdings: Merger Model and Financing Structure Decision</h3>
         <p>
-          Working through Breaking Into Wall Street's Advanced M&amp;A Modeling certificate, applied to a case study on Builders FirstSource's $2.6B acquisition of BMC Stock Holdings. Built a full merger model including purchase price allocation, combined financial statements, synergies, integration costs and accretion / dilution analysis, then tested the original 100% stock proposal against a recommended mixed cash, debt and stock structure. The 100% stock structure produced a weighted average cost of acquisition of 9.1% against BMC's 6.4% yield, leaving the deal dilutive in three of four years even with full synergies. The recommended mixed structure compressed cost of acquisition to 6.9% and produced 10 to 22% pro-forma EPS accretion across the four-year window. Recommended proceeding with the deal at a defensible 10.3x LTM EV / EBITDA multiple, but rejecting the all-stock financing.
+          Working through Breaking Into Wall Street's Advanced M&amp;A Modeling certificate, applied to a case study on Builders FirstSource's $2.6B acquisition of BMC Stock Holdings. Built a full merger model including purchase price allocation, combined financial statements, synergies, integration costs and accretion / dilution analysis, then tested the original 100% stock proposal against a recommended mixed cash, debt and stock structure. 
+          </p>
+        <p>
+             The 100% stock structure produced a weighted average cost of acquisition of 9.1% against BMC's 6.4% yield, leaving the deal dilutive in three of four years even with full synergies. The recommended mixed structure compressed cost of acquisition to 6.9% and produced 10 to 22% pro-forma EPS accretion across the four-year window. Recommended proceeding with the deal at a defensible 10.3x LTM EV / EBITDA multiple, but rejecting the all-stock financing.
         </p>
         <div class="project-metric">
           <div>
@@ -1286,7 +1312,7 @@
 
       <div class="project reveal">
         <div class="project-tag">Mergers and Acquisitions Course <span>·</span> UIUC Gies</div>
-        <h3>Lululemon Strategic Acquisition by Nike: Hypothetical M&amp;A and Synergy Analysis</h3>
+        <h3>Nike / Lululemon: Hypothetical Acquisition, Valuation and Synergy Analysis</h3>
         <p>Hypothetical strategic acquisition of Lululemon Athletica Inc. by Nike Inc. Valued Lululemon using DCF, trading comparables and precedent transactions. Modeled three synergy scenarios discounted at 11.4%, ran exchange ratio sensitivities and EPS accretion / dilution analysis under cash-plus-debt vs. all-stock structures. Recommended cash and debt financing over all-stock to preserve EPS upside and keep post-deal leverage at investment-grade levels.</p>
         <div class="project-metric">
           <div class="row"><span class="k">Final offer price · premium</span><span class="v">$264.78 / share · 26.4%</span></div>
@@ -1374,8 +1400,8 @@
           <span class="skill-tag">Accretion / Dilution</span>
           <span class="skill-tag">Capital Structure</span>
           <span class="skill-tag">Quality of Earnings</span>
-          <span class="skill-tag">Buy-side and Sell-side FDD</span>
-          <span class="skill-tag">M&amp;A Advisory</span>
+          <span class="skill-tag">Financial Due Diligence</span>
+          <span class="skill-tag">Transaction Readiness</span>
           <span class="skill-tag">Purchase Accounting (ASC 805)</span>
         </div>
       </div>
