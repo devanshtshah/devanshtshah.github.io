@@ -733,6 +733,70 @@
     background: linear-gradient(90deg, var(--accent-soft), var(--accent));
     transform: scaleX(1);
   }
+  .cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent-soft);
+    border-bottom: 1px solid rgba(200, 169, 104, 0.35);
+    padding-bottom: 2px;
+    transition: all 0.25s var(--ease);
+  }
+  .cert-link:hover {
+    color: var(--bg);
+    border-bottom-color: var(--bg);
+  }
+  .cert-link .ext { font-size: 0.72rem; }
+
+  /* Case-wise blocks inside the featured card */
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 36px;
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(216, 207, 184, 0.25);
+  }
+  @media (max-width: 760px) { .case-grid { grid-template-columns: 1fr; gap: 26px; } }
+  .case-block .case-label {
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+    margin-bottom: 7px;
+  }
+  .case-block .case-name {
+    font-family: var(--font-serif);
+    font-size: 1.06rem;
+    font-weight: 500;
+    color: var(--bg);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .case-block .case-rows .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    font-size: 0.82rem;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(216, 207, 184, 0.14);
+  }
+  .case-block .case-rows .row:last-child { border-bottom: none; margin-bottom: 0; }
+  .case-block .case-rows .k { color: rgba(246, 242, 232, 0.6); flex: 1; }
+  .case-block .case-rows .v {
+    color: var(--bg);
+    font-weight: 600;
+    font-feature-settings: 'tnum';
+    text-align: right;
+  }
 
   .project-tag {
     font-size: 0.7rem;
@@ -1093,8 +1157,8 @@
         <div class="label">Professional credentials<br/>CFA L1, CPA, CA</div>
       </div>
       <div class="stat">
-        <div class="num">6</div>
-        <div class="label">Deal and valuation<br/>case projects</div>
+        <div class="num">9</div>
+        <div class="label">Deal and valuation<br/>case studies</div>
       </div>
     </div>
   </div>
@@ -1115,7 +1179,7 @@
           My path into finance has not been linear and I've come to think of that as the advantage. Four years at <strong>PricewaterhouseCoopers (PwC)</strong> in Mumbai, across Capital Markets and Accounting Advisory and audit, put me in the room for technical work most peers haven't seen: an IFRS to US GAAP conversion and SEC filing readiness for a $34B Irish-listed industrials group, an IFRS transition for a $2B Saudi conglomerate and an embedded role inside a $20B UK telecom group's month-end close. The work taught me how financial statements actually behave under pressure.
         </p>
         <p>
-          The <strong>MS Finance program at UIUC Gies</strong> sharpened that foundation against the deal side. I built DCFs and LBOs on real tickers, modeled synergies and defended price targets to professors who had seen every assumption before. That same instinct now runs through my work as a Finance Associate at <strong>Aorbis Inc.</strong>, where I lead monthly close and working capital diagnostics and support the financial planning behind a new service launch. In parallel, I am working through the BIWS Advanced M&amp;A Modeling certificate, which has me building merger models on real public deals end to end. The accounting rigor and the investment lens both stay in play.
+          The <strong>MS Finance program at UIUC Gies</strong> sharpened that foundation against the deal side. I built DCFs and LBOs on real tickers, modeled synergies and defended price targets to professors who had seen every assumption before. That same instinct now runs through my work as a Finance Associate at <strong>Aorbis Inc.</strong>, where I lead monthly close and working capital diagnostics and support the financial planning behind a new service launch. Alongside that I completed the BIWS Advanced M&amp;A Modeling certificate, building merger, spinoff and step acquisition models on four public transactions end to end. The accounting rigor and the investment lens both stay in play.
         </p>
         <p>
           What I am building toward is a seat in <strong>investment banking, M&amp;A advisory, equity research or financial due diligence</strong>. The kind of work where the analysis has to defend itself, where a synergy figure or a price target has to hold up under questioning. The right answer is usually the one that survives the scrutiny.
@@ -1279,34 +1343,62 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow"><span class="eyebrow-num">04</span>Selected Projects</span>
-      <h2>Six case studies in valuation, mergers and acquisitions, leveraged buyouts and equity research</h2>
+      <h2>Case studies in mergers and acquisitions, valuation, leveraged buyouts and equity research</h2>
     </div>
 
     <div class="projects-grid stagger">
 
-      <!-- FEATURED: BIWS BLDR/BMC -->
+      <!-- FEATURED: BIWS Advanced M&A Modeling -->
       <div class="project featured reveal">
-        <div class="project-tag">BIWS Advanced M&amp;A Modeling Certificate <span>·</span> In Progress</div>
-        <h3>Builders FirstSource / BMC Stock Holdings: Merger Model and Financing Structure Decision</h3>
+        <div class="project-tag">BIWS Advanced M&amp;A Modeling Certificate <span>&#183;</span> Completed</div>
+        <h3>Advanced M&amp;A Modeling: Merger Models, Spinoff Valuation and Step Acquisition Accounting</h3>
         <p>
-          Working through Breaking Into Wall Street's Advanced M&amp;A Modeling certificate, applied to a case study on Builders FirstSource's $2.6B acquisition of BMC Stock Holdings. Built a full merger model including purchase price allocation, combined financial statements, synergies, integration costs and accretion / dilution analysis, then tested the original 100% stock proposal against a recommended mixed cash, debt and stock structure. 
-          </p>
-        <p>
-             The 100% stock structure produced a weighted average cost of acquisition of 9.1% against BMC's 6.4% yield, leaving the deal dilutive in three of four years even with full synergies. The recommended mixed structure compressed cost of acquisition to 6.9% and produced 10 to 22% pro-forma EPS accretion across the four-year window. Recommended proceeding with the deal at a defensible 10.3x LTM EV / EBITDA multiple, but rejecting the all-stock financing.
+          Completed Breaking Into Wall Street's Advanced M&amp;A Modeling certificate across four publicly announced transactions, covering purchase price allocation and accretion / dilution, variable close-date and exchange ratio structuring, deconsolidation and sum-of-the-parts valuation, plus step acquisition accounting under IFRS 3. One conclusion held across all four: financing structure and balance sheet capacity, rather than purchase price, close timing or legal structure, consistently drove the outcome.
         </p>
-        <div class="project-metric">
-          <div>
-            <div class="row"><span class="k">Purchase enterprise value</span><span class="v">$2.6B</span></div>
-            <div class="row"><span class="k">Offer price · premium</span><span class="v">$36.63 / share · 14%</span></div>
-            <div class="row"><span class="k">Original financing</span><span class="v">100% stock</span></div>
-            <div class="row"><span class="k">Recommended financing</span><span class="v">15% cash / 47% debt / 38% stock</span></div>
+        <a href="https://app.kajabi.com/certificates/43b93404" class="cert-link" target="_blank" rel="noopener">View certificate <span class="ext">&#8599;</span></a>
+
+        <div class="case-grid">
+
+          <div class="case-block">
+            <span class="case-label">Merger Model</span>
+            <div class="case-name">Builders FirstSource / BMC Stock Holdings</div>
+            <div class="case-rows">
+              <div class="row"><span class="k">Purchase enterprise value</span><span class="v">$2.6B</span></div>
+              <div class="row"><span class="k">Cost of acquisition</span><span class="v">9.1% to 6.9%</span></div>
+              <div class="row"><span class="k">Pro-forma EPS accretion</span><span class="v">+10% to +22%</span></div>
+            </div>
           </div>
-          <div>
-            <div class="row"><span class="k">Cost of acquisition (all-stock)</span><span class="v">9.1%</span></div>
-            <div class="row"><span class="k">Cost of acquisition (recommended)</span><span class="v">6.9%</span></div>
-            <div class="row"><span class="k">Pro-forma EPS accretion (Y1 to Y4)</span><span class="v">+10% to +22%</span></div>
-            <div class="row"><span class="k">Cost synergies by Year 3</span><span class="v">$141M</span></div>
+
+          <div class="case-block">
+            <span class="case-label">Advanced Structuring</span>
+            <div class="case-name">Builders FirstSource / BMC Stock Holdings</div>
+            <div class="case-rows">
+              <div class="row"><span class="k">Optimal close timing</span><span class="v">Later, under mixed financing</span></div>
+              <div class="row"><span class="k">Exchange ratio structure</span><span class="v">Floating with collar</span></div>
+              <div class="row"><span class="k">Legal structure</span><span class="v">Stock purchase, no EPS impact</span></div>
+            </div>
           </div>
+
+          <div class="case-block">
+            <span class="case-label">Spinoff and Sum-of-the-Parts</span>
+            <div class="case-name">SunPower / Maxeon Solar Technologies</div>
+            <div class="case-rows">
+              <div class="row"><span class="k">Combined SOTP enterprise value</span><span class="v">$5.7B to $6.7B</span></div>
+              <div class="row"><span class="k">Implied vs. market price</span><span class="v">$27.60 to $32.36 vs. $8.51</span></div>
+              <div class="row"><span class="k">Financing recommendation</span><span class="v">Convertible over equity</span></div>
+            </div>
+          </div>
+
+          <div class="case-block">
+            <span class="case-label">Step Acquisition</span>
+            <div class="case-name">Fortum / Uniper</div>
+            <div class="case-rows">
+              <div class="row"><span class="k">Incremental stake acquired</span><span class="v">&#8364;2.25B for 20.51%</span></div>
+              <div class="row"><span class="k">Pro-forma EPS accretion</span><span class="v">+3.6% to +13.7%</span></div>
+              <div class="row"><span class="k">Optimal stake identified</span><span class="v">80% vs. 70.5% proposed</span></div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1402,6 +1494,8 @@
           <span class="skill-tag">Quality of Earnings</span>
           <span class="skill-tag">Financial Due Diligence</span>
           <span class="skill-tag">Transaction Readiness</span>
+          <span class="skill-tag">Sum-of-the-Parts Valuation</span>
+          <span class="skill-tag">Synergy Modeling</span>
           <span class="skill-tag">Purchase Accounting (ASC 805)</span>
         </div>
       </div>
